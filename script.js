@@ -119,7 +119,6 @@ HTMLElement.prototype.up = function (e) {
             clearInterval(timer);
             clearInterval(checkStop);
             window.removeEventListener("keydown", deleteLetter);
-            item.removeEventListener("click", deleteLetterTouch);
             scoreInfo.style.display = "flex";
             userScore.innerHTML = score;
 
