@@ -34,6 +34,33 @@ body {
     flex-direction: column;
 }
 
+.endGameBlock {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+}
+
+.playAgain, .menu {
+    background: red;
+    padding: 10px 20px;
+    color: #fff;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.menu {
+    margin-left: 0;
+}
+.menu:hover {
+    cursor: pointer;
+}
+
+.endGameBlock.active {
+    display: flex;
+}
+
 .text {
     background-size: contain;
     background-position: center;
@@ -144,7 +171,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     font-family: cursive;
@@ -153,7 +180,18 @@ body {
     width: 300px;
     height: 100px;
     z-index: 1;
+    flex-direction: column;
     display: none;
+}
+
+.scoreInfo h2 {
+    display: flex;
+    align-items: center;
+    font-size: 19px;
+}
+
+.scoreInfo.active {
+    display: flex;
 }
 
 .userScore {
