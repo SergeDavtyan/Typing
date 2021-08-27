@@ -108,6 +108,10 @@ const StartGame = () => {
                         localStorage.setItem("Type game score", scoreBoard.innerHTML);
                     }
                     bestScore.innerHTML = localStorage.getItem("Type game score");
+                    scoreBoard.style.display = "none";
+                    document.querySelectorAll(".text").forEach(el => {
+                        el.remove()
+                    })
 
                 }
 
